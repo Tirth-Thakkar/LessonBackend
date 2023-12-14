@@ -161,6 +161,12 @@ public class Person {
 
         // Array definition and data initialization
         Person persons[] = {p1, p2, p3, p4, p5};
+        for (Person person : persons) {
+            Map<String, Object> statsMap = new HashMap<>();
+            statsMap.put("calories", 2200);
+            statsMap.put("steps", 8000);
+            person.getStats().put("2022-11-13", statsMap);
+        }
         return(persons);
     }
 
